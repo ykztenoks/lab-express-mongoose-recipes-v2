@@ -524,11 +524,9 @@ In this iteration, your task is to extend the functionality of the API  and prov
 
 #### 12.1 | Update the `User` Model
 
-To do this, you need to modify the schema of the `User` model and add a new field used for storing the favorite recipes:
+To do this, you need to modify the schema of the `User` model and add a new field `favorites` used for storing the favorite recipes:
 
--  **favorites** - Type `Array` of `ObjectId`s referencing the `Recipes` model 
-
-  (represented as `[ mongoose.ObjectId ]`). Default value: `[]`
+-  **favorites** - Type `Array` of `ObjectId`s referencing the documents from the `Recipes` model <br> (represented as `[ mongoose.ObjectId ]`). Default value: `[]`
 
   <br>
   
