@@ -47,15 +47,13 @@ To run our application, the first thing you have to do is install all of its dep
 npm install
 ```
 
-<br>
+
 
 We will use Mongoose to integrate a MongoDB database with our server. Run the following command to install it:
 
 ```shell
 npm install mongoose
 ```
-
-<br>
 
 
 
@@ -102,7 +100,7 @@ mongoose
 
 
 
-
+<hr>
 
 ### Iteration 2 - Recipe Model
 
@@ -152,7 +150,16 @@ Create a `User` model inside of the file `/models/User.model.js`. The schema sho
 
 Now that you have established the database connection and created the models, it's time to create the routes. We will start with the routes for the recepies colleciton.
 
-Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe document in the database. Here's your guide to configuring this route:
+Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe document in the database. See the instructions below on how to construct this route:
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
+
+
 
 **HTTP Request**
 
@@ -172,6 +179,17 @@ Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe 
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+
+</details>
+
+
+
 <br>
 
 
@@ -180,7 +198,14 @@ Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe 
 
 ### Iteration 5 | Read All Recipes
 
-Create a new route `GET` `/recipes` that, upon request, *retrieves* all the recipe documents from the database. This is how to construct this route:
+Create a new route `GET` `/recipes` that, upon request, *retrieves* all the recipe documents from the database. See instructions below for more details:
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
 
 
 
@@ -204,7 +229,19 @@ Create a new route `GET` `/recipes` that, upon request, *retrieves* all the reci
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+</details>
+
+
+
 <br>
+
+
 
 
 
@@ -212,7 +249,16 @@ Create a new route `GET` `/recipes` that, upon request, *retrieves* all the reci
 
 ### Iteration 6 | Read a Single Recipe
 
-Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specified recipe document by its `_id` from the database. You can find the requirements for the route below:
+Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specified recipe document by its `_id` from the database. You can find the instructions for the route below:
+
+
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
 
 
 
@@ -234,6 +280,16 @@ Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specif
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+</details>
+
+
+
 <br>
 
 
@@ -242,7 +298,18 @@ Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specif
 
 ### Iteration 7 | Update a Single Recipe
 
-Create a new route `PUT` `/recipes/:id` that, upon request, *updates* a specified recipe document in the database. The route should be set up in the following way:
+Create a new route `PUT` `/recipes/:id` that, upon request, *updates* a specified recipe document in the database. See the instructions below on how to construct this route:
+
+
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
+
+
 
 
 
@@ -265,6 +332,16 @@ Create a new route `PUT` `/recipes/:id` that, upon request, *updates* a specifie
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+</details>
+
+
+
 <br>
 
 
@@ -273,7 +350,16 @@ Create a new route `PUT` `/recipes/:id` that, upon request, *updates* a specifie
 
 ### Iteration 8 | Delete a Single Recipe
 
-Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a specified recipe document by its `_id` from the database. Here's how to set up this route:
+Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a specified recipe document by its `_id` from the database. See the instructions below on how to construct this route:
+
+
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
 
 
 
@@ -294,6 +380,19 @@ Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a speci
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+
+
+  <br>
+
+
+
+
+</details>
+
+
+
 <br>
 
 
@@ -302,7 +401,14 @@ Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a speci
 
 ### Iteration 9 | Create a Single User
 
-Create a new route `POST` `/users` that, upon request, *creates* a new user document in the database. The route should work in the following way:
+Create a new route `POST` `/users` that, upon request, *creates* a new user document in the database. See instructions below for more details:
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
 
 
 
@@ -324,6 +430,17 @@ Create a new route `POST` `/users` that, upon request, *creates* a new user docu
 **Error Response:**
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+
+  <br>
+
+
+
+
+</details>
+
+
 
 <br>
 
@@ -350,6 +467,13 @@ Create a new route `GET` `/users/:id` that, upon request, *retrieves* a specifie
 
 
 
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
+
+
+
 **HTTP Request:**
 
 - Method: **`GET`**
@@ -370,6 +494,16 @@ Create a new route `GET` `/users/:id` that, upon request, *retrieves* a specifie
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+</details>
+
+
+
 <br>
 
 
@@ -382,23 +516,46 @@ In this iteration, your task is to extend the functionality of the API  and prov
 
 
 
+<br>
+
+
+
+
+
 #### 12.1 | Update the `User` Model
 
 To do this, you need to modify the schema of the `User` model and add a new field used for storing the favorite recipes:
 
--  `favorites` - Type `Array` of `ObjectId`s referencing the `Recipes` model (represented as `[ mongoose.ObjectId ]`). Default value: `[]`
+-  **favorites** - Type `Array` of `ObjectId`s referencing the `Recipes` model 
+
+  (represented as `[ mongoose.ObjectId ]`). Default value: `[]`
 
   <br>
-
+  
   
 
 Once you have made this change, you will need to create a couple of new routes to update and retrieve user documents. 
 
 
 
+<br>
+
+<hr>
+
 #### 12.2 | Updating a Single User
 
 Create a route `PUT` `/users/:id` that, upon request, *updates* the specified user document and adds the *recipe id* to the `favorites`:
+
+
+
+  <br>
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
 
 
 
@@ -420,6 +577,16 @@ Create a route `PUT` `/users/:id` that, upon request, *updates* the specified us
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+</details>
+
+
+
 <br>
 
 
@@ -440,13 +607,30 @@ User.findByIdUpdate(
 
 *The `<USER_ID>` and `<RECIPE_ID>` are just placeholders that you should replace with the document `_id`.*
 
+
+
 <br>
 
 
 
+<hr>
+
 #### 12.3 | Retrieve a Single User with Favorites
 
 Create a route `GET` `/users/:id` that, upon request, *retrieves* the specified user document **with the populated `favorites` field**:
+
+
+
+  <br>
+
+
+
+<details>
+  <summary><b>See Instructions</b></summary>
+
+  <br>
+
+
 
 **HTTP Request:**
 
@@ -466,7 +650,23 @@ Create a route `GET` `/users/:id` that, upon request, *retrieves* the specified 
 
 - Status code: **`500`** (Internal Server Error) in case of an error.
 
+
+
+  <br>
+
+
+
+</details>
+
+
+
 <br>
+
+
+
+<hr>
+
+
 
 
 
@@ -508,15 +708,19 @@ Happy coding! :heart:
 
   There are a few things you can try to resolve the issue:
 
-    1. **Dependencies are not installed**: Make sure that all dependencies are installed.
-       To do this, run the command `npm install` in the root folder of your project.
-          This will install all of the dependencies listed in the project's `package.json` file, and ensure that all of the modules that your Node'js application requires are available.
-    2. **Module is not installed**: Make sure that the *package* you are trying to use is listed in the project's `package.json` and that it is installed.
-       To do this, run the command `npm install <package_name>`, replacing the `<package_name>` with the name of the package.
-          This will add the package to the list of dependencies in the `package.json` file, and install it in the project.
-    3. **Module is not imported:** Make sure that you've imported the module/package correctly and that the `require` statement is spelled correctly and available in the correct place in your code.
-    4. **Wrong file path:** If you are importing another file as a module, make sure that the file you are trying to require is located in the correct folder and that you are using the correct file path.
-    5. **Wrong module/package name:** Check the spelling of the package name you are trying to import.
+
+
+1. **Dependencies are not installed**: Make sure that all dependencies are installed.
+   To do this, run the command `npm install` in the root folder of your project.
+      This will install all of the dependencies listed in the project's `package.json` file, and ensure that all of the modules that your Node'js application requires are available.
+2. **Module is not installed**: Make sure that the *package* you are trying to use is listed in the project's `package.json` and that it is installed.
+   To do this, run the command `npm install <package_name>`, replacing the `<package_name>` with the name of the package.
+      This will add the package to the list of dependencies in the `package.json` file, and install it in the project.
+3. **Module is not imported:** Make sure that you've imported the module/package correctly and that the `require` statement is spelled correctly and available in the correct place in your code.
+4. **Wrong file path:** If you are importing another file as a module, make sure that the file you are trying to require is located in the correct folder and that you are using the correct file path.
+5. **Wrong module/package name:** Check the spelling of the package name you are trying to import.
+
+
 
   <br>
 
@@ -567,7 +771,7 @@ sudo kill -9 $(lsof -t -i:3000)
 4. In the Command Prompt terminal, run the following command to find the process ID:
 
    ```bash
-netstat -ano|findstr "PID :3000"
+   netstat -ano|findstr "PID :3000"
    ```
 
    > If the process happens to be running on another port, simply replace `3000` with the number the port number the process is running on.
@@ -575,7 +779,7 @@ netstat -ano|findstr "PID :3000"
    This will return the process id (PID). You should then run the following command using the process id (PID) you got in the previous step to terminate the process:
 
    ```bash
-taskkill /PID 12345 /f
+   taskkill /PID 12345 /f
    ```
 
    **Important:** Replace the above example PID *12345*, with the process id (PID) you got in the previous step.
@@ -629,7 +833,7 @@ sudo kill -9 $(lsof -t -i:3000)
 4. In the Command Prompt terminal, run the following command to find the process ID:
 
    ```bash
-netstat -ano|findstr "PID :3000"
+   netstat -ano|findstr "PID :3000"
    ```
 
    > If the process happens to be running on another port, simply replace `3000` with the number the port number the process is running on.
@@ -637,7 +841,7 @@ netstat -ano|findstr "PID :3000"
    This will return the process id (PID). You should then run the following command using the process id (PID) you got in the previous step to terminate the process:
 
    ```bash
-taskkill /PID 12345 /f
+   taskkill /PID 12345 /f
    ```
 
   **Important:** Replace the above example PID *12345*, with the process id (PID) you got in the previous step.
