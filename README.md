@@ -65,9 +65,11 @@ To run the app:
 npm run dev
 ```
 
-### 
+<br>
 
 
+
+<hr>
 
 ### Iteration 1 | Connect to MongoDB
 
@@ -84,6 +86,8 @@ const mongoose = require("mongoose");
 
 ```js
 // app.js
+//...
+
 const MONGODB_URI = "mongodb://127.0.0.1:27017/mongoose-recipes-dev";
 
 mongoose
@@ -120,6 +124,10 @@ Create a `Recipe` model inside of the file `/models/Recipe.model.js`. The schema
 
 <br>
 
+
+
+<hr>
+
 ### Iteration 3 | User Model
 
 Create a `User` model inside of the file `/models/User.model.js`. The schema should have the following fields:
@@ -138,100 +146,190 @@ Create a `User` model inside of the file `/models/User.model.js`. The schema sho
 
 
 
+<hr>
+
 ### Iteration 4 | Create Recipe
 
-Create a new route `POST` `/recipes` that, upon request, creates a new recipe document in the database.
+Now that you have established the database connection and created the models, it's time to create the routes. We will start with the routes for the recepies colleciton.
+
+Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe document in the database. Here's your guide to configuring this route:
+
+**HTTP Request**
 
 - Method: **`POST`**
 - Route: **`/recipes`**
-- Response:
-  - Status code: **`201`** (Created) if the document is successfully created.
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+
+**HTTP Response:**
+
+- Status code: **`201`** (Created) if the document is successfully created.
+- Content-Type: JSON
+
+
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 ### Iteration 5 | Read All Recipes
 
-Create a new route `GET` `/recipes` that, upon request, retrieves all the recipe documents from the database.
+Create a new route `GET` `/recipes` that, upon request, *retrieves* all the recipe documents from the database. This is how to construct this route:
+
+
+
+**HTTP Request:**
 
 - Method: **`GET`**
+
 - Route: **`/recipes`**
-- Response:
-  - Status code: **`200`** (OK)
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+  
+
+**HTTP Response:**
+
+- Status code: **`200`** (OK)
+
+- Content-Type: JSON
+
+  
+
+**Error response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 ### Iteration 6 | Read a Single Recipe
 
-Create a new route `GET` `/recipes/:id` that, upon request, retrieves a specified recipe document by its `_id` from the database.
+Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specified recipe document by its `_id` from the database. Please find the requirements for this route below:
+
+
+
+**HTTP Request:**
 
 - Method: **`GET`**
 - Route: **`/recipes/:id`**
-- Response:
-  - Status code: **`200`** (OK)
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+
+**HTTP Response:**
+
+- Status code: **`200`** (OK)
+- Content-Type: JSON
+
+
+
+**Error response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 ### Iteration 7 | Update a Single Recipe
 
-Create a new route `PUT` `/recipes/:id` that, upon request, updates a specified recipe document in the database.
+Create a new route `PUT` `/recipes/:id` that, upon request, *updates* a specified recipe document in the database. The route should be set up in the following way:
+
+
+
+**HTTP Request:**
 
 - Method: **`PUT`**
 - Route: **`/recipes/:id`**
-- Response:
-  - Status code: **`200`** (OK)
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+
+**HTTP Response:**
+
+- Status code: **`200`** (OK)
+
+- Content-Type: JSON
+
+  
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 ### Iteration 8 | Delete a Single Recipe
 
-Create a new route `DELETE` `/recipes/:id` that, upon request, deletes a specified recipe document by its `_id` from the database.
+Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a specified recipe document by its `_id` from the database. Here's how to set up this route:
+
+
+
+**HTTP Request:**
 
 - Method: **`DELETE`**
 - Route: **`/recipes/:id`**
-- Response:
-  - Status code: **`204`** (No Content) if the document is successfully deleted.
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+
+**HTTP Response:**
+
+- Status code: **`204`** (No Content) if the document is successfully deleted.
+
+
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 ### Iteration 9 | Create a Single User
 
-Create a new route `POST` `/users` that, upon request, creates a new user document in the database.
+Create a new route `POST` `/users` that, upon request, *creates* a new user document in the database. The route should work in the following way:
+
+
+
+**HTTP Request:**
 
 - Method: **`POST`**
+
 - Route: **`/users`**
-- Response:
-  - Status code: **`201`** (Created) if the document is successfully created.
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+  
+
+**HTTP Response:**
+
+- Status code: **`201`** (Created) if the document is successfully created.
+- Content-Type: JSON
+
+
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 
 ### Bonus - Iteration 10 | Populate Users in Recipes
@@ -244,24 +342,39 @@ You will need to use the `.populate()` method to do this. :wink:
 
 
 
-# 
+<hr>
 
 ### Bonus - Iteration 11 | Retrieve a Single User
 
 Create a new route `GET` `/users/:id` that, upon request, *retrieves* a specified user document by its `_id` from the database.
 
+
+
+**HTTP Request:**
+
 - Method: **`GET`**
+
 - Route: **`/users/:id`**
 
-- Response:
-  - Status code: **`200`** (OK)
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+  
+
+**HTTP Response:**
+
+- Status code: **`200`** (OK)
+
+- Content-Type: JSON
+
+  
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
 
+
+<hr>
 
 ### Bonus - Iteration 12 | Add Favorites
 
@@ -287,14 +400,27 @@ Once you have made this change, you will need to create a couple of new routes t
 
 Create a route `PUT` `/users/:id` that, upon request, *updates* the specified user document and adds the *recipe id* to the `favorites`:
 
+
+
+**HTTP Request:**
+
 - Method: **`PUT`**
 - Route: **`/users/:id`**
 
-- Response:
-  - Status code: **`200`** (OK)
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+**HTTP Response:**
+
+- Status code: **`200`** (OK)
+- Content-Type: JSON
+
+
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
+
+<br>
 
 
 
@@ -318,20 +444,27 @@ User.findByIdUpdate(
 
 
 
-
-
 #### 12.3 | Retrieve a Single User with Favorites
 
 Create a route `GET` `/users/:id` that, upon request, *retrieves* the specified user document **with the populated `favorites` field**:
 
+**HTTP Request:**
+
 - Method: **`GET`**
 - Route: **`/users/:id`**
 
-- Response:
-  - Status code: **`200`** (OK)
-  - Content-Type: JSON
-- Error response:
-  - Status code: **`500`** (Internal Server Error) in case of an error.
+
+
+**HTTP Response:**
+
+- Status code: **`200`** (OK)
+- Content-Type: JSON
+
+
+
+**Error Response:**
+
+- Status code: **`500`** (Internal Server Error) in case of an error.
 
 <br>
 
