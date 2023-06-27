@@ -212,7 +212,7 @@ Create a new route `GET` `/recipes` that, upon request, *retrieves* all the reci
 
 ### Iteration 6 | Read a Single Recipe
 
-Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specified recipe document by its `_id` from the database. Please find the requirements for this route below:
+Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specified recipe document by its `_id` from the database. You can find the requirements for the route below:
 
 
 
