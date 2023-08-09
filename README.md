@@ -186,7 +186,7 @@ Create a `Recipe` model inside of the file `/models/Recipe.model.js`. The schema
 
 ### Iteration 3 | Create a Recipe
 
-Now that you have established the database connection and created the models, it's time to create the routes. We will start with the routes for the recepies colleciton.
+Now that you have established the database connection and created the models, it's time to create the routes. We will start with the routes for the recepies collection.
 
 Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe document in the database. See the instructions below on how to construct this route:
 
