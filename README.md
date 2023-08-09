@@ -539,6 +539,7 @@ Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a speci
 <br>
 
 
+<!--
 
 <hr>
 
@@ -916,7 +917,7 @@ Update the route `GET` `/users/:id` so that it *retrieves* the specified user do
 
 
 
-
+-->
 
 Happy coding! :heart:
 
