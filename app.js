@@ -15,35 +15,49 @@ app.use(express.json());
 
 
 // ROUTES
-//  GET  / route
+//  GET  / route - This is just an example route
 app.get('/', (req, res) => {
-    res.send("<h1>Lab | Express Mongoose Recipes</h1>");
+    res.send("<h1>LAB | Express Mongoose Recipes</h1>");
 });
 
 
-//  Iteration 4 - Create recipe route
+//  Iteration 3 - Create a Recipe route
 //  POST  /recipes route
 
 
-//  Iteration 5 - Read all recipes
+//  Iteration 4 - Get All Recipes
 //  GET  /recipes route
 
 
-//  Iteration 6 - Read a single recipe
+//  Iteration 5 - Get a Single Recipe
 //  GET  /recipes/:id route
 
 
-//  Iteration 7 - Update a single recipe
+//  Iteration 6 - Update a Single Recipe
 //  PUT  /recipes/:id route
 
 
-//  Iteration 8 - Delete a single recipe
+//  Iteration 7 - Delete a Single Recipe
 //  DELETE  /recipes/:id route
 
 
-//  Iteration 9 - Create a single user
+// BONUS
+//  Bonus: Iteration 9 - Create a Single User
 //  POST  /users route
+
+
+//  Bonus: Iteration 10 | Get a Single User
+//  GET /users/:id route
+
+
+//  Bonus: Iteration 11 | Update a Single User
+//  GET /users/:id route
 
 
 // Start the server
 app.listen(3000, () => console.log('My first app listening on port 3000!'));
+
+
+
+//❗️DO NOT REMOVE THE BELOW CODE
+module.exports = app;
