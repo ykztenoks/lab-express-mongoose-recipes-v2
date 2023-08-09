@@ -147,9 +147,30 @@ Create a `Recipe` model inside of the file `/models/Recipe.model.js`. The schema
 
   <summary><b>Solution</b></summary>
 
-  <p align="center">
-    <img src="" alt="" width="700">
-  </p>
+  ```js
+  // models/Recipe.model.js
+
+  const mongoose = require("mongoose");
+  const Schema = mongoose.Schema;
+
+  // CREATE A SCHEMA
+  const recipeSchema = new Schema({
+    title: { type: String, required: true, unique: true },
+    instructions: { type: String, required: true },
+    level: { type: String, enum: ["Easy Peasy", "Amateur Chef", "UltraPro Chef"] },
+    ingredients: { type: [String] },
+    image: { type: String, default: "https://images.media-allrecipes.com/images/75131.jpg" },
+    duration: { type: Number, min: 0 },
+    isArchived: { type: Boolean, default: false },
+    created: { type: Date, default: Date.now }
+  });
+
+  // CREATE A MODEL
+  const Recipe = mongoose.model("Recipe", recipeSchema);
+
+  // EXPORT THE MODEL
+  module.exports = Recipe;
+  ```
 
 
   <br>
@@ -162,6 +183,7 @@ Create a `Recipe` model inside of the file `/models/Recipe.model.js`. The schema
 
 
 <hr>
+
 ### Iteration 3 | Create a Recipe
 
 Now that you have established the database connection and created the models, it's time to create the routes. We will start with the routes for the recepies colleciton.
@@ -212,7 +234,7 @@ Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe 
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/01-lab-mongoose-recipes-solution-post-recipes.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -282,7 +304,7 @@ Create a new route `GET` `/recipes` that, upon request, *retrieves* all the reci
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/02-lab-mongoose-recipes-solution-get-all-recipes.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -354,7 +376,7 @@ Create a new route `GET` `/recipes/:id` that, upon request, *retrieves* a specif
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/03-lab-mongoose-recipes-solution-get-single-recipe.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -427,7 +449,7 @@ Create a new route `PUT` `/recipes/:id` that, upon request, *updates* a specifie
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/04-lab-mongoose-recipes-solution-update-single-recipe.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -499,7 +521,7 @@ Create a new route `DELETE` `/recipes/:id` that, upon request, *deletes* a speci
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/05-lab-mongoose-recipes-solution-update-single-recipe.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -544,9 +566,28 @@ Create a `User` model inside of the file `/models/User.model.js`. The schema sho
 
   <summary><b>Solution</b></summary>
 
-  <p align="center">
-    <img src="" alt="" width="700">
-  </p>
+  ```js
+  // models/User.model.js
+
+  const mongoose = require("mongoose");
+  const Schema = mongoose.Schema;
+
+  // CREATE A SCHEMA
+  const userSchema = new Schema({
+    email: { type: String, required: true, unique: true },
+    firstName: { type: String, required: true, minlength: 2 },
+    lastName: { type: String, required: true, minlength: 2 },
+    password: { type: String, required: true, minlength: 8 },
+    image: { type: String, default: "https://xsgames.co/randomusers/assets/avatars/pixel/44.jpg" },
+    favorites: { type: [ Schema.Types.ObjectId ], ref: "Recipe", default: [] }
+  });
+
+  // CREATE A MODEL
+  const User = mongoose.model("User", userSchema);
+
+  // EXPORT THE MODEL
+  module.exports = User;
+  ```
 
 
   <br>
@@ -605,15 +646,13 @@ Create a new route `POST` `/users` that, upon request, *creates* a new user docu
 
 </details>
 
-
-
 <details>
 
 
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/06-lab-mongoose-recipes-solution-create-single-user.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -683,7 +722,7 @@ Create a new route `GET` `/users/:id` that, upon request, *retrieves* a specifie
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/07-lab-mongoose-recipes-solution-get-single-user.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -783,7 +822,7 @@ User.findByIdUpdate(
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/08-lab-mongoose-recipes-solution-update-single-user.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
@@ -801,7 +840,8 @@ User.findByIdUpdate(
 
 
 <hr>
-## Bonus: Iteration 12 | Populate Favorites
+
+### Bonus: Iteration 12 | Populate Favorites
 
 Update the route `GET` `/users/:id` so that it *retrieves* the specified user document **with the populated `favorites` field**:
 
@@ -852,7 +892,7 @@ Update the route `GET` `/users/:id` so that it *retrieves* the specified user do
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="" alt="" width="700">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/09-lab-mongoose-recipes-solution-populate-user-favorites.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
