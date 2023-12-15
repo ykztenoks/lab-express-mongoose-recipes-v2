@@ -41,18 +41,6 @@ app.get('/', (req, res) => {
 //  DELETE  /recipes/:id route
 
 
-// BONUS
-//  Bonus: Iteration 9 - Create a Single User
-//  POST  /users route
-
-
-//  Bonus: Iteration 10 | Get a Single User
-//  GET /users/:id route
-
-
-//  Bonus: Iteration 11 | Update a Single User
-//  GET /users/:id route
-
 
 // Start the server
 app.listen(3000, () => console.log('My first app listening on port 3000!'));
