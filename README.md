@@ -126,7 +126,7 @@ mongoose
 
 Create a `Recipe` model inside of the file `/models/Recipe.model.js`. The schema should have the following fields:
 
-- **title** - Type `String`. It should be *required*.
+- **title** - Type `String`. It should be *required* and *unique*.
 - **instructions** - Type `String`. It should be *required*.
 - **level** - Type `String`. It can be one of the following values: _Easy Peasy_ - _Amateur Chef_ - _UltraPro Chef_ (use the [`enum`](https://mongoosejs.com/docs/api/schemanumberoptions.html#SchemaNumberOptions.prototype.enum) validator :wink:).
 - **ingredients** - Type `Array` of `String`s - represented as `[ String ]`.
