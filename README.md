@@ -234,7 +234,7 @@ Create a new route `POST` `/recipes` that, upon request, *creates* a new recipe 
   <summary><b>Solution</b></summary>
 
   <p align="center">
-    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/01-lab-mongoose-recipes-solution-post-recipes.png" alt="iteration solution code snippet" width="750">
+    <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-mongoose-recipes-v2/01-lab-mongoose-recipes-solution-post-recipes-req-body.png" alt="iteration solution code snippet" width="750">
   </p>
 
 
